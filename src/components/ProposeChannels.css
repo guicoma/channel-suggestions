@@ -1,0 +1,20 @@
+.addChannel {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.addChannel b {
+  margin-left: 30px;
+}
+
+.placeholder {
+  text-align: center;
+  color: lightgrey;
+}
+
+.icon-custom {
+  vertical-align: text-bottom;
+}
