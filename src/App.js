@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from "react";
 import ProposeChannels from "./components/ProposeChannels"
+import ViewChannels from "./components/ViewChannels"
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,22 +14,23 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <p>Envianos los canales que te gustaría ver en el server, tanto de tus intereses como los que creas que sean útiles para la comunidad.<br/>
-          Os recordamos que la idea principal detrás de los canales pueden albergar estos puntos:</p>
+          <h4>Propon canales para el server</h4>
+          <p>Aqui te dejamos un herramienta para que puedas enviar una propuesta de canales que te gustaría ver en el server, tanto de tus intereses como los que creas que sean útiles para la comunidad.<br/>
+          Os recordamos que la idea principal del server apunta hacía estos puntos:</p>
           <ul>
-            <li>Ayudar a las personas con recomendaciones</li>
-            <li>Compartir recursos y noticias sobre la temática de la technología</li>
-            <li>Tener un espacio para la charla y cosas off-topic</li>
+            <li>Ayudar a las personas en el sector de la informática, tecnología, etc... </li>
+            <li>Compartir recursos y noticias sobre la temática de la tecnología</li>
+            <li>Tener un espacio social para charla y cosas off-topic</li>
           </ul>
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/check">
+              <ViewChannels />
+            </Route>
             <Route path="/">
               <ProposeChannels />
             </Route>
-            {/* <Route path="/check">
-              <ViewChannels />
-            </Route> */}
           </Switch>
         </div>
       </Router>
